@@ -2,7 +2,7 @@
 For effective collaboration, this team agrees to work in the following manner:
 * Work is done in iterations
 * Work is done on working branches
-* Work is frequently 
+* Work is frequently committed and pushed to github
 * Work is considered to be a draft until reviewed by team
 * Team members are expected to review work of peers and promptly provide constructive feedback and comments and or explicit positive affirmation 
 * There are no bad ideas, we are here to learn - however, don't let bad ideas consume too much of your time, Share your work with the team often to get constructive feedback
