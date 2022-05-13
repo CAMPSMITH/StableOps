@@ -5,7 +5,7 @@
 ![Paxos Price History](images/USDP_price.png)
 ![Paxos Price Histogram](images/paxos_price_hist.png)
 
-In theory, if this volatility could be harnessed, it might lead to 4-6% yield.  The objective of this project is to analyze volatility in stablecoin procing and assess whether this volatility could provide profitable arbitrage opportunities. 
+If this volatility could be harnessed, it might profitable.  The objective of this project is to analyze volatility in stablecoin pricing and assess whether this volatility could provide profitable arbitrage opportunities. 
 
 ---
 
