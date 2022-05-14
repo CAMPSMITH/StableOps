@@ -32,5 +32,7 @@ def coin_gecko_cleaner(url_to_coin):
     df['total_volumes']=df['total_volumes'].apply(extract_value)
     df['time'] = df['time']/1000
     df['time']=df['time'].apply(epoch_to_datetime)
+    df['time'] = df['time'].dt.date
     df.set_index('time', inplace=True)
     return df
+
