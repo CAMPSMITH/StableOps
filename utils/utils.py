@@ -63,6 +63,7 @@ def coin_gecko_cleaner(url_to_coin):
     df['time'] = df['time']/1000
     df['time']=df['time'].apply(epoch_to_datetime)
     df['time'] = df['time'].dt.date
+    df.drop_duplicates(subset=['time'], keep='first', inplace=True)
     df.set_index('time', inplace=True)
+    df.sort_index(inplace=True)
     return df
-
