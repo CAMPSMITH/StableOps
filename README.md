@@ -39,7 +39,7 @@ If this volatility could be harnessed, it might be profitable.  The objective of
 * **python-dotenv** - A python library used to configure an environment through key-value pairs stored in a file.
 * **hvplot** - A set of Python visualization tools used to create compelling, and interactive visualizations.  
 * **pytz** - A python library that facilitates time zone handling and conversion
-* **PRESENTATION MAKING TOOL** - What tool is used to create presentation
+* **Jupyter Notebook Slides** - Uses Jupyter Notebook and turns it into a slideshow for a technical presentation.
 
 ---
 
@@ -73,10 +73,35 @@ Once Jupyter Lab has started in your browser, select the **StableOps.ipynb** not
 
 ![launch Notebook StableOps.ipynb](images/start_notebook.png)
 
+### StableOps Presentation Notebook
+Launch the Desktop Jupyter Notebook app. Start by selecting **View** from the menu followed by **Cell Toolbar** and **Slideshow**.
+
+![launch StableOps_Presentation_01.ipynb](images/Presentation_Slideshow.png)
+
+Once **Slideshow** is activated, changing the view will allow to set the type of slides for each cell. There are 5 Types of slides to choose from:
+
+- **Slide** | Main content of a slide - can use markdown, visuals, or code.
+- **Sub-Slide** | Considered as a new slide with transition animation.
+- **Fragment** | Component of the previous cell. Fragment will be inside the main slide but with a fade-in transition.
+- **Skip** | This cell will not be shown on the slides.
+- **Notes** | Creates Speaker notes (not tested - need a local copy of the Reveal.JS file)
+
+![launch StableOps_Presentation_01.ipynb](images/Presentation_Notebook.png)
+
+YOU CAN HIDE THE CODES FROM THE SLIDE by changing the **Cell Toolbar** view into **Tags** (View -> Cell Toolbar View -> Tags). For each code cell that has visualisation element, enter *"to_remove"* on the field and press **Add Tag**.
+
+![launch StableOps_Presentation_01.ipynb](images/Presentation_Slideshow_Tags.png)
+
 ### Run StableOps Presentation
 Simply open the presentation file using a browser.
 ![run StableOps presentation](images/run_stableops_presentation.png)
 
+### Run a New Version of the StableOps Presentation
+In the StableOps directory type in:
+```
+jupyter nbconvert "StableOps_Presentation_01.ipynb" --to slides --no-prompt --TagRemovePreprocessor.remove_input_tags={\"to_remove\"} --post serve 
+```
+This will create a new "StableOps_Presentation_01.slides .html" and run the new presentation using a browser.
 
 ### Additional Notebooks
 * **intraday.ipynb** - A notebook that analyzed stablecoin volatility using high resolution data, up to 1 minute intervals.
