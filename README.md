@@ -44,8 +44,25 @@ If this volatility could be harnessed, it might be profitable.  The objective of
 ---
 
 ## Installation Guide
+### Prerequisites
+* Ensure that Anaconda is installed
+* It is recommended that a conda virtual environment is created and used for this analysis
+```
+conda create -n <environment name> python=3.7 anaconda
+conda activate <environment name>
+```
+**note:** remember to deactivate your environmnent when done with `conda deactivate`
+* ensure hvplot is installed in your conda environment
+```
+conda install hvplot
+```
+see [hvplot installation guide](https://github.com/conda-forge/hvplot-feedstock#:~:text=Installing%20hvplot%20from%20the%20conda-forge%20channel%20can%20be,has%20been%20enabled%2C%20hvplot%20can%20be%20installed%20with%3A) for more information.
 
-TBD ...
+### Start Jupyter Lab
+Once your conda virtural environment is started with all prerequisites, start Jupyter Lab:
+```
+jupyter lab
+```
 
 ---
 
