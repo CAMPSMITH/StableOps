@@ -39,6 +39,7 @@ If this volatility could be harnessed, it might be profitable.  The objective of
 * **python-dotenv** - A python library used to configure an environment through key-value pairs stored in a file.
 * **hvplot** - A set of Python visualization tools used to create compelling, and interactive visualizations.  
 * **pytz** - A python library that facilitates time zone handling and conversion
+* **PRESENTATION MAKING TOOL** - What tool is used to create presentation
 
 ---
 
@@ -51,12 +52,14 @@ TBD ...
 ## Usage
 
 ### StableOps Analysis Notebook
-Once Jupyter Lab has started in your browser, select the **StableOps.ipynb** notebook from the **Left Sidebar**.
+Once Jupyter Lab has started in your browser, select the **StableOps.ipynb** notebook from the **Left Sidebar**.  This is the main analytical notebook.
 
 ![launch Notebook StableOps.ipynb](images/start_notebook.png)
 
 ### Run StableOps Presentation
-TBD ...
+Simply open the presentation file using a browser.
+![run StableOps presentation](images/run_stableops_presentation.png)
+
 
 ### Additional Notebooks
 * **intraday.ipynb** - A notebook that analyzed stablecoin volatility using high resolution data, up to 1 minute intervals.
