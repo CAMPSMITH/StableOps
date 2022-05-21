@@ -85,6 +85,31 @@ Simply open the presentation file using a browser.
 
 ---
 
+## Summary of Analysis and Results
+### Method
+The following analysis was conducted:
+* Analysis of selected stablecoin price volatility using daily data spanning several years
+* Analysis of selected stablecoin price intraday volatility using i minute interval data spanning several years
+* Rolling Period analysis of daily and intraday stablecoin price volatility to assess trends over different time periods
+* Survey of yield farming yields as a safe alternative to arbitrage on stablecoin price volatility
+* Modelling of arbitrage based on stablecoin price volatility and yield farming returns
+* Risk Reward analysis using Sharpe Ratio
+* as a bonus, analysis of the UST/LUNA collapse
+### Key Results
+![stablecoin rolling 3 day](images/images/coins_rolling_3day.png)
+* Volatility trends changed over time
+* Significant volatility tended to span a few days
+![coin prices last 365 days](images/overlapping_coin_prices_last_year.png)  
+![annualized arbitrage returns](images/annualized_returns.png)
+* sUSD represents the best arbitrage candidate of the coins we analyzed
+![sharpe ratio](images/sharpe_ratio.png)
+* Despite the potential high return of arbitrage on sUSD, the Sharpe ratio favors yield farming due to the high volatility of sUSD.  The Sharpe Ratio of sUSD is still significantly above 1 and therefore still favorable and may be a good fit for those with higher risk tolerance.
+![Luna trading volumes during collapse](images/luna_cap.png)
+* The arbitrage opportunity was different than the one we modelled: UST <-> LUNA, rather than spot price <-> peg
+* During the UST/LUNA collapse, a high amount of nearly instantaneous intraday arbitrage occurred
+
+---
+
 ## Contributors
 
 *  **Quintin Bland** <span>&nbsp;&nbsp;</span> |
