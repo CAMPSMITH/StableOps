@@ -96,7 +96,7 @@ The following analysis was conducted:
 * Risk Reward analysis using Sharpe Ratio
 * as a bonus, analysis of the UST/LUNA collapse
 ### Key Results
-![stablecoin rolling 3 day](images/images/coins_rolling_3day.png)
+![stablecoin rolling 3 day](images/coins_rolling_3day.png)
 * Volatility trends changed over time
 * Significant volatility tended to span a few days
 ![coin prices last 365 days](images/overlapping_coin_prices_last_year.png)  
