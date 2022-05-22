@@ -39,29 +39,99 @@ If this volatility could be harnessed, it might be profitable.  The objective of
 * **python-dotenv** - A python library used to configure an environment through key-value pairs stored in a file.
 * **hvplot** - A set of Python visualization tools used to create compelling, and interactive visualizations.  
 * **pytz** - A python library that facilitates time zone handling and conversion
+* **Jupyter Notebook Slides** - Uses Jupyter Notebook and turns it into a slideshow for a technical presentation.
 
 ---
 
 ## Installation Guide
+### Prerequisites
+* Ensure that Anaconda is installed
+* It is recommended that a conda virtual environment is created and used for this analysis
+```
+conda create -n <environment name> python=3.7 anaconda
+conda activate <environment name>
+```
+**note:** remember to deactivate your environmnent when done with `conda deactivate`
+* ensure hvplot is installed in your conda environment
+```
+conda install hvplot
+```
+see [hvplot installation guide](https://github.com/conda-forge/hvplot-feedstock#:~:text=Installing%20hvplot%20from%20the%20conda-forge%20channel%20can%20be,has%20been%20enabled%2C%20hvplot%20can%20be%20installed%20with%3A) for more information.
 
-TBD ...
+### Start Jupyter Lab
+Once your conda virtural environment is started with all prerequisites, start Jupyter Lab:
+```
+jupyter lab
+```
 
 ---
 
 ## Usage
 
 ### StableOps Analysis Notebook
-Once Jupyter Lab has started in your browser, select the **StableOps.ipynb** notebook from the **Left Sidebar**.
+Once Jupyter Lab has started in your browser, select the **StableOps.ipynb** notebook from the **Left Sidebar**.  This is the main analytical notebook.
 
 ![launch Notebook StableOps.ipynb](images/start_notebook.png)
 
+### StableOps Presentation Notebook
+Launch the Desktop Jupyter Notebook app. Start by selecting **View** from the menu followed by **Cell Toolbar** and **Slideshow**.
+
+![launch StableOps_Presentation_01.ipynb](images/Presentation_Slideshow.png)
+
+Once **Slideshow** is activated, changing the view will allow to set the type of slides for each cell. There are 5 Types of slides to choose from:
+
+- **Slide** | Main content of a slide - can use markdown, visuals, or code.
+- **Sub-Slide** | Considered as a new slide with transition animation.
+- **Fragment** | Component of the previous cell. Fragment will be inside the main slide but with a fade-in transition.
+- **Skip** | This cell will not be shown on the slides.
+- **Notes** | Creates Speaker notes (not tested - need a local copy of the Reveal.JS file)
+
+![launch StableOps_Presentation_01.ipynb](images/Presentation_Notebook.png)
+
+YOU CAN HIDE THE CODES FROM THE SLIDE by changing the **Cell Toolbar** view into **Tags** (View -> Cell Toolbar View -> Tags). For each code cell that has visualisation element, enter *"to_remove"* on the field and press **Add Tag**.
+
+![launch StableOps_Presentation_01.ipynb](images/Presentation_Slideshow_Tags.png)
+
 ### Run StableOps Presentation
-TBD ...
+Simply open the presentation file using a browser.
+![run StableOps presentation](images/run_stableops_presentation.png)
+
+### Run a New Version of the StableOps Presentation
+In the StableOps directory type in:
+```
+jupyter nbconvert "StableOps_Presentation_01.ipynb" --to slides --no-prompt --TagRemovePreprocessor.remove_input_tags={\"to_remove\"} --post serve 
+```
+This will create a new "StableOps_Presentation_01.slides .html" and run the new presentation using a browser.
 
 ### Additional Notebooks
 * **intraday.ipynb** - A notebook that analyzed stablecoin volatility using high resolution data, up to 1 minute intervals.
 * **stable_coin_compare.ipynb** - A notebook that surveyed and analyzed yield farming opportynities.
 * **Terra.ipynb** - A notebook that analuzed the collapse of UST and LUNA that occured between 2022-05-07 - 2022-05-14
+
+---
+
+## Summary of Analysis and Results
+### Method
+The following analysis was conducted:
+* Analysis of selected stablecoin price volatility using daily data spanning several years
+* Analysis of selected stablecoin price intraday volatility using i minute interval data spanning several years
+* Rolling Period analysis of daily and intraday stablecoin price volatility to assess trends over different time periods
+* Survey of yield farming yields as a safe alternative to arbitrage on stablecoin price volatility
+* Modelling of arbitrage based on stablecoin price volatility and yield farming returns
+* Risk Reward analysis using Sharpe Ratio
+* as a bonus, analysis of the UST/LUNA collapse
+### Key Results
+![stablecoin rolling 3 day](images/coins_rolling_3day.png)
+* Volatility trends changed over time
+* Significant volatility tended to span a few days
+![coin prices last 365 days](images/overlapping_coin_prices_last_year.png)  
+![annualized arbitrage returns](images/annualized_returns.png)
+* sUSD represents the best arbitrage candidate of the coins we analyzed
+![sharpe ratio](images/sharpe_ratio.png)
+* Despite the potential high return of arbitrage on sUSD, the Sharpe ratio favors yield farming due to the high volatility of sUSD.  The Sharpe Ratio of sUSD is still significantly above 1 and therefore still favorable and may be a good fit for those with higher risk tolerance.
+![Luna trading volumes during collapse](images/luna_cap.png)
+* The arbitrage opportunity was different than the one we modelled: UST <-> LUNA, rather than spot price <-> peg
+* During the UST/LUNA collapse, a high amount of nearly instantaneous intraday arbitrage occurred
 
 ---
 
